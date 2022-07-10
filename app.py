@@ -8,7 +8,7 @@ app = Flask(__name__)
 def val():
     link = str(request.args.get('link'))
     ab = set()
-    for res in YouTube(link).streams.filter(type="video"):
+    for res in YouTube(link).streams.filter(type="video").order_by("resolution"):
         ab.add(res.resolution)
     ab = (sorted(ab))
     print(type(ab))
