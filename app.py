@@ -9,7 +9,7 @@ def val():
     link = str(request.args.get('link'))
     key, vall, = [], []
     ttl = YouTube(link).title
-    for res in YouTube(link).streams.filter(type="video").order_by("resolution"):
+    for i in YouTube(link).streams.filter(type="video").order_by("resolution"):
         if i.resolution not in key:
             key.append(i.resolution)
             vall.append(i.url)
