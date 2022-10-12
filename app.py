@@ -7,12 +7,15 @@ app = Flask(__name__)
 @app.route('/test')
 def val():
     link = str(request.args.get('link'))
-    ab = set()
+    key, vall, = [], []
+    ttl = YouTube(link).title
     for res in YouTube(link).streams.filter(type="video").order_by("resolution"):
-        ab.add(res.resolution)
-    ab = (sorted(ab))
-    print(type(ab))
-    return {"res": ab}
+        if i.resolution not in key:
+            key.append(i.resolution)
+            vall.append(i.url)
+    ab = dict(zip(key, vall))
+    ab["title"] = ttl
+    return ab
 
 
 if __name__ == "__main__":
