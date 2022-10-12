@@ -14,9 +14,9 @@ def val():
             key.append(i.resolution)
             vall.append(i.url)
     for i in range(len(key)):
-    ab.update({"quality": key[i]})
-    ab.update({"link": vall[i]})
-    return ab
+        ab.update({"quality": key[i]})
+        ab.update({"link": vall[i]})
+        return ab
 
 
 if __name__ == "__main__":
