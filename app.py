@@ -13,8 +13,9 @@ def val():
         if i.resolution not in key:
             key.append(i.resolution)
             vall.append(i.url)
-    ab = dict(zip(key, vall))
-    ab["title"] = ttl
+    for i in range(len(key)):
+    ab.update({"quality": key[i]})
+    ab.update({"link": vall[i]})
     return ab
 
 
