@@ -15,8 +15,7 @@ def val():
             vall.append(i.url)
     ab = dict(zip(key, vall))
     ab["title"] = ttl
-    print(type(ab))
-    print(ab)
+    ab["qualitylist"] = key
     return ab
 
 
