@@ -16,7 +16,7 @@ def val():
     for i in range(len(key)):
         ab.update({"quality": key[i]})
         ab.update({"link": vall[i]})
-        return ab
+    return ab
 
 
 if __name__ == "__main__":
