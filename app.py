@@ -13,10 +13,11 @@ def val():
         if i.resolution not in key:
             key.append(i.resolution)
             vall.append(i.url)
-    for i in range(len(key)):
-        ab.update({"quality": key[i]})
-        ab.update({"link": vall[i]})
-    return {ab}
+    ab = dict(zip(key, vall))
+    ab["title"] = ttl
+    print(type(ab))
+    print(ab)
+    return ab
 
 
 if __name__ == "__main__":
