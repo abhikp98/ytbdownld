@@ -9,12 +9,14 @@ def val():
     link = str(request.args.get('link'))
     key, vall, = [], []
     ttl = YouTube(link).title
+    tnu = YouTube(link).thumbnail_url
     for i in YouTube(link).streams.filter(type="video").order_by("resolution"):
         if i.resolution not in key:
             key.append(i.resolution)
             vall.append(i.url)
     ab = dict(zip(key, vall))
     ab["title"] = ttl
+    ab["thumbnail"] = tnu
     ab["qualitylist"] = key
     return ab
 
