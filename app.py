@@ -14,10 +14,7 @@ def val():
         if i.resolution not in key:
             key.append(i.resolution)
             vall.append(i.url)
-    for i, j in zip(range(len(key)), range(len(vall))):
-        a = {"name": key[i], "link": vall[j]}
-        lis.append(a)
-    last = {"data": lis, "title": ttl, "qualitylist": key, "thumbnail": tnu}
+    last = {"link":vall, "qualitylist": key, "title": ttl, "thumbnail": tnu}
     return last
 
 
